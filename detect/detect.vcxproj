@@ -1,0 +1,1302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Detect Call Of Duty|Win32">
+      <Configuration>Detect Call Of Duty</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Detect Call Of Duty|x64">
+      <Configuration>Detect Call Of Duty</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Detect DayZ|Win32">
+      <Configuration>Detect DayZ</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Detect DayZ|x64">
+      <Configuration>Detect DayZ</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Detect FiveM|Win32">
+      <Configuration>Detect FiveM</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Detect FiveM|x64">
+      <Configuration>Detect FiveM</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Detect Fortnite|Win32">
+      <Configuration>Detect Fortnite</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Detect Fortnite|x64">
+      <Configuration>Detect Fortnite</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Detect FreeFire|Win32">
+      <Configuration>Detect FreeFire</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Detect FreeFire|x64">
+      <Configuration>Detect FreeFire</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Detect Minecraft|Win32">
+      <Configuration>Detect Minecraft</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Detect Minecraft|x64">
+      <Configuration>Detect Minecraft</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Detect Roblox|Win32">
+      <Configuration>Detect Roblox</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Detect Roblox|x64">
+      <Configuration>Detect Roblox</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Detect Rust|Win32">
+      <Configuration>Detect Rust</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Detect Rust|x64">
+      <Configuration>Detect Rust</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Detect Siege|Win32">
+      <Configuration>Detect Siege</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Detect Siege|x64">
+      <Configuration>Detect Siege</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{af5fe85d-6a4a-47a3-b27c-0da60ea93d51}</ProjectGuid>
+    <RootNamespace>detect</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>detect</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Detect Minecraft|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Detect Siege|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Detect FiveM|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Detect FreeFire|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Detect Roblox|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Detect Fortnite|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Detect Call Of Duty|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Detect Rust|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Detect DayZ|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Detect Minecraft|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Detect Siege|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Detect FiveM|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Detect FreeFire|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Detect Roblox|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Detect Fortnite|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Detect Call Of Duty|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Detect Rust|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Detect DayZ|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Detect Minecraft|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Detect Siege|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Detect FiveM|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Detect FreeFire|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Detect Roblox|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Detect Fortnite|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Detect Call Of Duty|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Detect Rust|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Detect DayZ|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Detect Minecraft|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Detect Siege|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Detect FiveM|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Detect FreeFire|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Detect Roblox|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Detect Fortnite|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Detect Call Of Duty|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Detect Rust|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Detect DayZ|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Detect Minecraft|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Detect Siege|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Detect FiveM|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Detect FreeFire|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Detect Roblox|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Detect Fortnite|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Detect Call Of Duty|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Detect Rust|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Detect DayZ|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)ext/include/</IncludePath>
+    <OutDir>$(SolutionDir)build\detect\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)intermediates\detect\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)ext/include/</IncludePath>
+    <OutDir>$(SolutionDir)build\detect\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)intermediates\detect\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Detect Minecraft|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)ext/include/</IncludePath>
+    <OutDir>$(SolutionDir)build\detect\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)intermediates\detect\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Detect Siege|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)ext/include/</IncludePath>
+    <OutDir>$(SolutionDir)build\detect\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)intermediates\detect\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Detect FiveM|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)ext/include/</IncludePath>
+    <OutDir>$(SolutionDir)build\detect\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)intermediates\detect\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Detect FreeFire|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)ext/include/</IncludePath>
+    <OutDir>$(SolutionDir)build\detect\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)intermediates\detect\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Detect Roblox|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)ext/include/</IncludePath>
+    <OutDir>$(SolutionDir)build\detect\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)intermediates\detect\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Detect Fortnite|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)ext/include/</IncludePath>
+    <OutDir>$(SolutionDir)build\detect\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)intermediates\detect\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Detect Call Of Duty|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)ext/include/</IncludePath>
+    <OutDir>$(SolutionDir)build\detect\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)intermediates\detect\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Detect Rust|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)ext/include/</IncludePath>
+    <OutDir>$(SolutionDir)build\detect\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)intermediates\detect\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Detect DayZ|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)ext/include/</IncludePath>
+    <OutDir>$(SolutionDir)build\detect\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)intermediates\detect\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>YR_STATIC;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);YARA_STATIC</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>;C:\yara\libyara\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(DXSDK_DIR)Lib\x86\d3d11.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>YR_STATIC;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions);YARA_STATIC</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>;C:\yara\libyara\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(DXSDK_DIR)Lib\x86\d3d11.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Detect Minecraft|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>YR_STATIC;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions);YARA_STATIC</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>;C:\yara\libyara\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(DXSDK_DIR)Lib\x86\d3d11.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Detect Siege|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>YR_STATIC;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions);YARA_STATIC</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>;C:\yara\libyara\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(DXSDK_DIR)Lib\x86\d3d11.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Detect FiveM|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>YR_STATIC;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions);YARA_STATIC</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>;C:\yara\libyara\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(DXSDK_DIR)Lib\x86\d3d11.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Detect FreeFire|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>YR_STATIC;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions);YARA_STATIC</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>;C:\yara\libyara\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(DXSDK_DIR)Lib\x86\d3d11.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Detect Roblox|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>YR_STATIC;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions);YARA_STATIC</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>;C:\yara\libyara\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(DXSDK_DIR)Lib\x86\d3d11.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Detect Fortnite|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>YR_STATIC;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions);YARA_STATIC</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>;C:\yara\libyara\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(DXSDK_DIR)Lib\x86\d3d11.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Detect Call Of Duty|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>YR_STATIC;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions);YARA_STATIC</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>;C:\yara\libyara\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(DXSDK_DIR)Lib\x86\d3d11.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Detect Rust|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>YR_STATIC;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions);YARA_STATIC</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>;C:\yara\libyara\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(DXSDK_DIR)Lib\x86\d3d11.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Detect DayZ|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>YR_STATIC;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions);YARA_STATIC</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>;C:\yara\libyara\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(DXSDK_DIR)Lib\x86\d3d11.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level1</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>YARA_STATIC;CURL_STATICLIB;_SILENCE_EXPERIMENTAL_FILESYSTEM_DEPRECATION_WARNING;_CRT_SECURE_NO_WARNINGS;_SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING;_DEBUG;CONSOLE;%(PreprocessorDefinitions);YARA_STATIC</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <AdditionalIncludeDirectories>$(SolutionDir)ext/include/;C:\detect.ac\detect-ss\ext\include\yara\libyara\include;C:\yara\libyara\include</AdditionalIncludeDirectories>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>libyara64.lib;ucrt.lib;User32.lib;comsupp.lib;comsuppw.lib;taskschd.lib;wevtapi.lib;Kernel32.lib;DbgHelp.lib;Shell32.lib;Ole32.lib;wbemuuid.lib;Normaliz.lib;Ws2_32.lib;Wldap32.lib;Crypt32.lib;advapi32.lib;Secur32.lib;Shlwapi.lib;wintrust.lib;Wtsapi32.lib;Setupapi.lib;winhttp.lib;Dxva2.lib;ntdll.lib;oleaut32.lib;version.lib;esent.lib;$(SolutionDir)/ext/lib/fmtd.lib;$(DXSDK_DIR)Lib\x64\d3d11.lib;$(SolutionDir)/ext/lib/libcurl_a_debug.lib;%(AdditionalDependencies);$(SolutionDir)/ext/lib/libcrypto_static.lib;$(SolutionDir)/ext/lib/libssl_static.lib</AdditionalDependencies>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <AdditionalOptions>/MT /LTCG:incremental /FORCE:MULTIPLE /IGNORE:4006 /IGNORE:4088 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalLibraryDirectories>C:\yara\windows\vs2019\libyara\Release</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level1</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>YARA_STATIC;CURL_STATICLIB;_SILENCE_EXPERIMENTAL_FILESYSTEM_DEPRECATION_WARNING;_CRT_SECURE_NO_WARNINGS;_SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING;NDEBUG;_CONSOLE;%(PreprocessorDefinitions);YARA_STATIC</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <AdditionalIncludeDirectories>$(SolutionDir)ext/include/;C:\detect.ac\detect-ss\ext\include\yara\libyara\include;C:\yara\libyara\include</AdditionalIncludeDirectories>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>libyara64.lib;ucrt.lib;User32.lib;comsupp.lib;comsuppw.lib;taskschd.lib;wevtapi.lib;Kernel32.lib;DbgHelp.lib;Shell32.lib;Ole32.lib;wbemuuid.lib;Normaliz.lib;Ws2_32.lib;Wldap32.lib;Crypt32.lib;advapi32.lib;Secur32.lib;Shlwapi.lib;wintrust.lib;Wtsapi32.lib;Setupapi.lib;winhttp.lib;Dxva2.lib;ntdll.lib;oleaut32.lib;version.lib;esent.lib;$(SolutionDir)/ext/lib/fmt.lib;$(DXSDK_DIR)Lib\x64\d3d11.lib;$(SolutionDir)/ext/lib/libcurl_a.lib;%(AdditionalDependencies);$(SolutionDir)/ext/lib/libcrypto_static.lib;$(SolutionDir)/ext/lib/libssl_static.lib</AdditionalDependencies>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+      <AdditionalOptions>/LTCG:incremental /FORCE:MULTIPLE /IGNORE:4006 /IGNORE:4088 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalLibraryDirectories>C:\yara\windows\vs2019\libyara\Release</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Detect Minecraft|x64'">
+    <ClCompile>
+      <WarningLevel>Level1</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>YARA_STATIC;DETECT_MINECRAFT;CURL_STATICLIB;_SILENCE_EXPERIMENTAL_FILESYSTEM_DEPRECATION_WARNING;_CRT_SECURE_NO_WARNINGS;_SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING;NDEBUG;_CONSOLE;JM_XORSTR_DISABLE_AVX_INTRINSICS;%(PreprocessorDefinitions);YARA_STATIC</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <AdditionalIncludeDirectories>$(SolutionDir)ext/include/;C:\detect.ac\detect-ss\ext\include\yara\libyara\include;C:\yara\libyara\include</AdditionalIncludeDirectories>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>libyara64.lib;ucrt.lib;User32.lib;comsupp.lib;comsuppw.lib;taskschd.lib;wevtapi.lib;Kernel32.lib;DbgHelp.lib;Shell32.lib;Ole32.lib;wbemuuid.lib;Normaliz.lib;Ws2_32.lib;Wldap32.lib;Crypt32.lib;advapi32.lib;Secur32.lib;Shlwapi.lib;wintrust.lib;Wtsapi32.lib;Setupapi.lib;winhttp.lib;Dxva2.lib;ntdll.lib;oleaut32.lib;version.lib;esent.lib;$(SolutionDir)/ext/lib/fmt.lib;C:\Program Files (x86)\Windows Kits\10\Lib\10.0.26100.0\um\x64\d3d11.lib;$(SolutionDir)/ext/lib/libcurl_a.lib;%(AdditionalDependencies);$(SolutionDir)/ext/lib/libcrypto_static.lib;$(SolutionDir)/ext/lib/libssl_static.lib</AdditionalDependencies>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+      <AdditionalOptions>/LTCG:incremental /FORCE:MULTIPLE /IGNORE:4006 /IGNORE:4088 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalLibraryDirectories>C:\yara\windows\vs2019\libyara\Release</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Detect Siege|x64'">
+    <ClCompile>
+      <WarningLevel>Level1</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>YARA_STATIC;DETECT_SIEGE;CURL_STATICLIB;_SILENCE_EXPERIMENTAL_FILESYSTEM_DEPRECATION_WARNING;_CRT_SECURE_NO_WARNINGS;_SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING;NDEBUG;_CONSOLE;JM_XORSTR_DISABLE_AVX_INTRINSICS;%(PreprocessorDefinitions);YARA_STATIC</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <AdditionalIncludeDirectories>$(SolutionDir)ext/include/;C:\detect.ac\detect-ss\ext\include\yara\libyara\include;C:\yara\libyara\include</AdditionalIncludeDirectories>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>libyara64.lib;ucrt.lib;User32.lib;comsupp.lib;comsuppw.lib;taskschd.lib;wevtapi.lib;Kernel32.lib;DbgHelp.lib;Shell32.lib;Ole32.lib;wbemuuid.lib;Normaliz.lib;Ws2_32.lib;Wldap32.lib;Crypt32.lib;advapi32.lib;Secur32.lib;Shlwapi.lib;wintrust.lib;Wtsapi32.lib;Setupapi.lib;winhttp.lib;Dxva2.lib;ntdll.lib;oleaut32.lib;version.lib;esent.lib;$(SolutionDir)/ext/lib/fmt.lib;C:\Program Files (x86)\Windows Kits\10\Lib\10.0.26100.0\um\x64\d3d11.lib;$(SolutionDir)/ext/lib/libcurl_a.lib;%(AdditionalDependencies);$(SolutionDir)/ext/lib/libcrypto_static.lib;$(SolutionDir)/ext/lib/libssl_static.lib</AdditionalDependencies>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+      <AdditionalOptions>/LTCG:incremental /FORCE:MULTIPLE /IGNORE:4006 /IGNORE:4088 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalLibraryDirectories>C:\yara\windows\vs2019\libyara\Release</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Detect FiveM|x64'">
+    <ClCompile>
+      <WarningLevel>Level1</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>YARA_STATIC;DETECT_FIVEM;CURL_STATICLIB;_SILENCE_EXPERIMENTAL_FILESYSTEM_DEPRECATION_WARNING;_CRT_SECURE_NO_WARNINGS;_SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING;NDEBUG;_CONSOLE;JM_XORSTR_DISABLE_AVX_INTRINSICS;%(PreprocessorDefinitions);YARA_STATIC</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <AdditionalIncludeDirectories>$(SolutionDir)ext/include/;C:\detect.ac\detect-ss\ext\include\yara\libyara\include;C:\yara\libyara\include</AdditionalIncludeDirectories>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>libyara64.lib;ucrt.lib;User32.lib;comsupp.lib;comsuppw.lib;taskschd.lib;wevtapi.lib;Kernel32.lib;DbgHelp.lib;Shell32.lib;Ole32.lib;wbemuuid.lib;Normaliz.lib;Ws2_32.lib;Wldap32.lib;Crypt32.lib;advapi32.lib;Secur32.lib;Shlwapi.lib;wintrust.lib;Wtsapi32.lib;Setupapi.lib;winhttp.lib;Dxva2.lib;ntdll.lib;oleaut32.lib;version.lib;esent.lib;cfgmgr32.lib;$(SolutionDir)/ext/lib/fmt.lib;C:\Program Files (x86)\Windows Kits\10\Lib\10.0.26100.0\um\x64\d3d11.lib;$(SolutionDir)/ext/lib/libcurl_a.lib;%(AdditionalDependencies);$(SolutionDir)/ext/lib/libcrypto_static.lib;$(SolutionDir)/ext/lib/libssl_static.lib</AdditionalDependencies>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+      <AdditionalOptions>/LTCG:incremental /FORCE:MULTIPLE /IGNORE:4006 /IGNORE:4088 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalLibraryDirectories>C:\yara\windows\vs2019\libyara\Release</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Detect FreeFire|x64'">
+    <ClCompile>
+      <WarningLevel>Level1</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>YARA_STATIC;DETECT_FREEFIRE;CURL_STATICLIB;_SILENCE_EXPERIMENTAL_FILESYSTEM_DEPRECATION_WARNING;_CRT_SECURE_NO_WARNINGS;_SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING;NDEBUG;_CONSOLE;JM_XORSTR_DISABLE_AVX_INTRINSICS;%(PreprocessorDefinitions);YARA_STATIC</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <AdditionalIncludeDirectories>$(SolutionDir)ext/include/;C:\detect.ac\detect-ss\ext\include\yara\libyara\include;C:\yara\libyara\include</AdditionalIncludeDirectories>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>libyara64.lib;ucrt.lib;User32.lib;comsupp.lib;comsuppw.lib;taskschd.lib;wevtapi.lib;Kernel32.lib;DbgHelp.lib;Shell32.lib;Ole32.lib;wbemuuid.lib;Normaliz.lib;Ws2_32.lib;Wldap32.lib;Crypt32.lib;advapi32.lib;Secur32.lib;Shlwapi.lib;wintrust.lib;Wtsapi32.lib;Setupapi.lib;winhttp.lib;Dxva2.lib;ntdll.lib;oleaut32.lib;version.lib;esent.lib;$(SolutionDir)/ext/lib/fmt.lib;C:\Program Files (x86)\Windows Kits\10\Lib\10.0.26100.0\um\x64\d3d11.lib;$(SolutionDir)/ext/lib/libcurl_a.lib;%(AdditionalDependencies);$(SolutionDir)/ext/lib/libcrypto_static.lib;$(SolutionDir)/ext/lib/libssl_static.lib</AdditionalDependencies>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+      <AdditionalOptions>/LTCG:incremental /FORCE:MULTIPLE /IGNORE:4006 /IGNORE:4088 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalLibraryDirectories>C:\yara\windows\vs2019\libyara\Release</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Detect Roblox|x64'">
+    <ClCompile>
+      <WarningLevel>Level1</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>YARA_STATIC;DETECT_ROBLOX;CURL_STATICLIB;_SILENCE_EXPERIMENTAL_FILESYSTEM_DEPRECATION_WARNING;_CRT_SECURE_NO_WARNINGS;_SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING;NDEBUG;_CONSOLE;JM_XORSTR_DISABLE_AVX_INTRINSICS;%(PreprocessorDefinitions);YARA_STATIC</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <AdditionalIncludeDirectories>$(SolutionDir)ext/include/;C:\detect.ac\detect-ss\ext\include\yara\libyara\include;C:\yara\libyara\include</AdditionalIncludeDirectories>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>libyara64.lib;ucrt.lib;User32.lib;comsupp.lib;comsuppw.lib;taskschd.lib;wevtapi.lib;Kernel32.lib;DbgHelp.lib;Shell32.lib;Ole32.lib;wbemuuid.lib;Normaliz.lib;Ws2_32.lib;Wldap32.lib;Crypt32.lib;advapi32.lib;Secur32.lib;Shlwapi.lib;wintrust.lib;Wtsapi32.lib;Setupapi.lib;winhttp.lib;Dxva2.lib;ntdll.lib;oleaut32.lib;version.lib;esent.lib;$(SolutionDir)/ext/lib/fmt.lib;C:\Program Files (x86)\Windows Kits\10\Lib\10.0.26100.0\um\x64\d3d11.lib;$(SolutionDir)/ext/lib/libcurl_a.lib;%(AdditionalDependencies);$(SolutionDir)/ext/lib/libcrypto_static.lib;$(SolutionDir)/ext/lib/libssl_static.lib</AdditionalDependencies>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+      <AdditionalOptions>/LTCG:incremental /FORCE:MULTIPLE /IGNORE:4006 /IGNORE:4088 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalLibraryDirectories>C:\yara\windows\vs2019\libyara\Release</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Detect Fortnite|x64'">
+    <ClCompile>
+      <WarningLevel>Level1</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>YARA_STATIC;DETECT_FORTNITE;CURL_STATICLIB;_SILENCE_EXPERIMENTAL_FILESYSTEM_DEPRECATION_WARNING;_CRT_SECURE_NO_WARNINGS;_SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING;NDEBUG;_CONSOLE;JM_XORSTR_DISABLE_AVX_INTRINSICS;%(PreprocessorDefinitions);YARA_STATIC</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <AdditionalIncludeDirectories>$(SolutionDir)ext/include/;C:\detect.ac\detect-ss\ext\include\yara\libyara\include;C:\yara\libyara\include</AdditionalIncludeDirectories>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>libyara64.lib;ucrt.lib;User32.lib;comsupp.lib;comsuppw.lib;taskschd.lib;wevtapi.lib;Kernel32.lib;DbgHelp.lib;Shell32.lib;Ole32.lib;wbemuuid.lib;Normaliz.lib;Ws2_32.lib;Wldap32.lib;Crypt32.lib;advapi32.lib;Secur32.lib;Shlwapi.lib;wintrust.lib;Wtsapi32.lib;Setupapi.lib;winhttp.lib;Dxva2.lib;ntdll.lib;oleaut32.lib;version.lib;esent.lib;$(SolutionDir)/ext/lib/fmt.lib;C:\Program Files (x86)\Windows Kits\10\Lib\10.0.26100.0\um\x64\d3d11.lib;$(SolutionDir)/ext/lib/libcurl_a.lib;%(AdditionalDependencies);$(SolutionDir)/ext/lib/libcrypto_static.lib;$(SolutionDir)/ext/lib/libssl_static.lib</AdditionalDependencies>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+      <AdditionalOptions>/LTCG:incremental /FORCE:MULTIPLE /IGNORE:4006 /IGNORE:4088 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalLibraryDirectories>C:\yara\windows\vs2019\libyara\Release</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Detect Call Of Duty|x64'">
+    <ClCompile>
+      <WarningLevel>Level1</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>YARA_STATIC;DETECT_COD;CURL_STATICLIB;_SILENCE_EXPERIMENTAL_FILESYSTEM_DEPRECATION_WARNING;_CRT_SECURE_NO_WARNINGS;_SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING;NDEBUG;_CONSOLE;JM_XORSTR_DISABLE_AVX_INTRINSICS;%(PreprocessorDefinitions);YARA_STATIC</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <AdditionalIncludeDirectories>$(SolutionDir)ext/include/;C:\detect.ac\detect-ss\ext\include\yara\libyara\include;C:\yara\libyara\include</AdditionalIncludeDirectories>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>libyara64.lib;ucrt.lib;User32.lib;comsupp.lib;comsuppw.lib;taskschd.lib;wevtapi.lib;Kernel32.lib;DbgHelp.lib;Shell32.lib;Ole32.lib;wbemuuid.lib;Normaliz.lib;Ws2_32.lib;Wldap32.lib;Crypt32.lib;advapi32.lib;Secur32.lib;Shlwapi.lib;wintrust.lib;Wtsapi32.lib;Setupapi.lib;winhttp.lib;Dxva2.lib;ntdll.lib;oleaut32.lib;version.lib;esent.lib;$(SolutionDir)/ext/lib/fmt.lib;C:\Program Files (x86)\Windows Kits\10\Lib\10.0.26100.0\um\x64\d3d11.lib;$(SolutionDir)/ext/lib/libcurl_a.lib;%(AdditionalDependencies);$(SolutionDir)/ext/lib/libcrypto_static.lib;$(SolutionDir)/ext/lib/libssl_static.lib</AdditionalDependencies>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+      <AdditionalOptions>/LTCG:incremental /FORCE:MULTIPLE /IGNORE:4006 /IGNORE:4088 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalLibraryDirectories>C:\yara\windows\vs2019\libyara\Release</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Detect Rust|x64'">
+    <ClCompile>
+      <WarningLevel>Level1</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>YARA_STATIC;DETECT_RUST;CURL_STATICLIB;_SILENCE_EXPERIMENTAL_FILESYSTEM_DEPRECATION_WARNING;_CRT_SECURE_NO_WARNINGS;_SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING;NDEBUG;_CONSOLE;JM_XORSTR_DISABLE_AVX_INTRINSICS;%(PreprocessorDefinitions);YARA_STATIC</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <AdditionalIncludeDirectories>$(SolutionDir)ext/include/;C:\detect.ac\detect-ss\ext\include\yara\libyara\include;C:\yara\libyara\include</AdditionalIncludeDirectories>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>libyara64.lib;ucrt.lib;User32.lib;comsupp.lib;comsuppw.lib;taskschd.lib;wevtapi.lib;Kernel32.lib;DbgHelp.lib;Shell32.lib;Ole32.lib;wbemuuid.lib;Normaliz.lib;Ws2_32.lib;Wldap32.lib;Crypt32.lib;advapi32.lib;Secur32.lib;Shlwapi.lib;wintrust.lib;Wtsapi32.lib;Setupapi.lib;winhttp.lib;Dxva2.lib;ntdll.lib;oleaut32.lib;version.lib;esent.lib;$(SolutionDir)/ext/lib/fmt.lib;C:\Program Files (x86)\Windows Kits\10\Lib\10.0.26100.0\um\x64\d3d11.lib;$(SolutionDir)/ext/lib/libcurl_a.lib;%(AdditionalDependencies);$(SolutionDir)/ext/lib/libcrypto_static.lib;$(SolutionDir)/ext/lib/libssl_static.lib</AdditionalDependencies>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+      <AdditionalOptions>/LTCG:incremental /FORCE:MULTIPLE /IGNORE:4006 /IGNORE:4088 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalLibraryDirectories>C:\yara\windows\vs2019\libyara\Release</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Detect DayZ|x64'">
+    <ClCompile>
+      <WarningLevel>Level1</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>YARA_STATIC;DETECT_DAYZ;CURL_STATICLIB;_SILENCE_EXPERIMENTAL_FILESYSTEM_DEPRECATION_WARNING;_CRT_SECURE_NO_WARNINGS;_SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING;NDEBUG;_CONSOLE;JM_XORSTR_DISABLE_AVX_INTRINSICS;%(PreprocessorDefinitions);YARA_STATIC</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <AdditionalIncludeDirectories>$(SolutionDir)ext/include/;C:\detect.ac\detect-ss\ext\include\yara\libyara\include;C:\yara\libyara\include</AdditionalIncludeDirectories>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>libyara64.lib;ucrt.lib;User32.lib;comsupp.lib;comsuppw.lib;taskschd.lib;wevtapi.lib;Kernel32.lib;DbgHelp.lib;Shell32.lib;Ole32.lib;wbemuuid.lib;Normaliz.lib;Ws2_32.lib;Wldap32.lib;Crypt32.lib;advapi32.lib;Secur32.lib;Shlwapi.lib;wintrust.lib;Wtsapi32.lib;Setupapi.lib;winhttp.lib;Dxva2.lib;ntdll.lib;oleaut32.lib;version.lib;esent.lib;ole32.lib;oleaut32.lib;$(SolutionDir)/ext/lib/fmt.lib;C:\Program Files (x86)\Windows Kits\10\Lib\10.0.26100.0\um\x64\d3d11.lib;$(SolutionDir)/ext/lib/libcurl_a.lib;%(AdditionalDependencies);$(SolutionDir)/ext/lib/libcrypto_static.lib;$(SolutionDir)/ext/lib/libssl_static.lib</AdditionalDependencies>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+      <AdditionalOptions>/LTCG:incremental /FORCE:MULTIPLE /IGNORE:4006 /IGNORE:4088 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalLibraryDirectories>C:\yara\windows\vs2019\libyara\Release</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="detections\client_checks\sus_Ads\c_sus_ads.cpp" />
+    <ClCompile Include="detections\deleted_prefetch\c_deleted_prefetch.cpp" />
+    <ClCompile Include="detections\task_scheduler_bypass2\c_taskscheduler_bypass_2.cpp" />
+    <ClCompile Include="detections\wmi\c_wmi.cpp" />
+    <ClCompile Include="detections\nvidia_driver_patch\c_nvidia_driver_patch.cpp" />
+    <ClCompile Include="detections\saved_files\c_saved_files.cpp" />
+    <ClCompile Include="detections\letterless_volumes\c_letterless_volumes.cpp" />
+    <ClCompile Include="detections\file_handler_bypass\c_cpl_file.cpp" />
+    <ClCompile Include="detections\file_handler_bypass\c_msi_file.cpp" />
+    <ClCompile Include="detections\file_handler_bypass\c_reg_file.cpp" />
+    <ClCompile Include="detections\file_handler_bypass\c_inf_file.cpp" />
+    <ClCompile Include="detections\hardware\dma_pads\c_dma_pads.cpp" />
+    <ClCompile Include="detections\hardware\dma_protection\c_dma_protection.cpp" />
+    <ClCompile Include="detections\powershell_detections\powershell_commands_ran_3\c_powershell_commands_3.cpp" />
+    <ClCompile Include="detections\task_scheduler_bypass\c_tasksch_bypass.cpp" />
+    <ClCompile Include="detections\files_ran_as_admin\c_files_ran_as_admin.cpp" />
+    <ClCompile Include="detections\prefetch_injection_detection\c_prefetch_injection.cpp" />
+    <ClCompile Include="detections\efi_detections\c_efi_detections.cpp" />
+    <ClCompile Include="detections\efi_detections\c_efi_measured_boot.cpp" />
+    <ClCompile Include="detections\eventlog_bypass\c_eventlog_exploit.cpp" />
+    <ClCompile Include="detections\client_checks\yara_scanner\c_yara_scanner.cpp">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles>
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="detections\client_checks\yara_scanner\rule_delivery.cpp">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles>
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="detections\client_checks\jvm_arg_scanner\c_jvm_arg_scanner.cpp" />
+    <ClCompile Include="detections\client_checks\java_injection\c_java_injection.cpp" />
+    <ClCompile Include="detections\eventlog_bypass\c_eventlog_bypass.cpp" />
+    <ClCompile Include="detections\prefetch_integrity\c_prefetch_integrity.cpp" />
+    <ClCompile Include="detections\ex_python_detection\c_ex_python.cpp" />
+    <ClCompile Include="detections\vbs_detection\c_vbs.cpp" />
+    <ClCompile Include="detections\ahk_bypass\c_ahk_bypass.cpp" />
+    <ClCompile Include="detections\cmd_and_bat\c_cmd_and_bat.cpp" />
+    <ClCompile Include="detections\asar_detection\c_asar_detection.cpp" />
+    <ClCompile Include="detections\crash_dump_checks\c_cdumps.cpp" />
+    <ClCompile Include="detections\powershell_detections\powershell_logsize\c_powershell_logsize.cpp" />
+    <ClCompile Include="detections\club44_bypass\c_club44.cpp" />
+    <ClCompile Include="detections\terminated_processes\c_terminated_processes.cpp" />
+    <ClCompile Include="detections\restarted_services\c_restarted_services.cpp" />
+    <ClCompile Include="detections\discord_accounts\c_discord_accounts.cpp" />
+    <ClCompile Include="detections\browser_detections\browser_cleared_history\c_cleared_history.cpp" />
+    <ClCompile Include="detections\cold_bypass\c_cold_bypass.cpp" />
+    <ClCompile Include="detections\hosts_and_prefetch\c_hosts_and_prefetch.cpp" />
+    <ClCompile Include="detections\executed_diffdrive\c_executed_diffdrive.cpp" />
+    <ClCompile Include="detections\onedrive_termination\c_onedrive_term.cpp" />
+    <ClCompile Include="detections\deleted_bam_keys\c_deleted_bam.cpp" />
+    <ClCompile Include="detections\deleted_registry_keys\c_deleted_reg_keys.cpp" />
+    <ClCompile Include="detections\control_flow_guard\c_cfg_check.cpp" />
+    <ClCompile Include="detections\system_info\c_system_info.cpp" />
+    <ClCompile Include="detections\r6_alts\c_r6_alts.cpp" />
+    <ClCompile Include="detections\epic_alts\c_epic_alts.cpp" />
+    <ClCompile Include="detections\customstrings\AMCACHE\c_custom_amcache.cpp" />
+    <ClCompile Include="detections\customstrings\SGRM\c_custom_sgrm2.cpp" />
+    <ClCompile Include="detections\usnjournal\junctions\c_junctions.cpp" />
+    <ClCompile Include="detections\cleaned_bam_and_installdate\c_bamcleaned_installdatespoofed.cpp" />
+    <ClCompile Include="detections\client_checks\client_checks_windb\url_checks\c_windb_urls.cpp" />
+    <ClCompile Include="detections\strings\winmanagement\c_winmanagement.cpp" />
+    <ClCompile Include="detections\customstrings\POWERSHELL\c_powershell_utils.cpp" />
+    <ClCompile Include="detections\customstrings\POWERSHELL\POWERSHELL_NORMAL\c_custom_powershell.cpp" />
+    <ClCompile Include="detections\enableprefetcher_delete\c_enableprefetcher_delete.cpp" />
+    <ClCompile Include="detections\usb_bypass_registry\c_usb_bypass_registry.cpp" />
+    <ClCompile Include="detections\usn_bypass_checks\c_usn_bypass_checks.cpp" />
+    <ClCompile Include="detections\fileinfosys_detection\c_prefetch_bypass.cpp" />
+    <ClCompile Include="detections\browser_detections\c_start_browsers.cpp" />
+    <ClCompile Include="detections\anydesk_files\c_anydesk_files.cpp" />
+    <ClCompile Include="detections\browser_detections\browser_download_history\c_browser_downloads.cpp" />
+    <ClCompile Include="detections\browser_detections\browser_search_history\c_browserhistory.cpp" />
+    <ClCompile Include="detections\customstrings\EVENTLOG\c_custom_evt.cpp" />
+    <ClCompile Include="detections\customstrings\FIVEM\c_custom_fivem.cpp" />
+    <ClCompile Include="detections\customstrings\SIHOST\c_custom_si.cpp" />
+    <ClCompile Include="detections\customstrings\TASKHOSTW\c_custom_task.cpp" />
+    <ClCompile Include="detections\hardware\hdmi_fusers\c_ddc_support.cpp" />
+    <ClCompile Include="detections\powershell_detections\powershell_commands_ran_2\c_commands_ran_2.cpp" />
+    <ClCompile Include="detections\lua_script_detection\c_lua_script_detection.cpp" />
+    <ClCompile Include="detections\customstrings\LOGITECH\c_custom_logitech.cpp" />
+    <ClCompile Include="detections\customstrings\DISCORD\c_custom_discord.cpp" />
+    <ClCompile Include="detections\customstrings\CHROME\c_custom_chrome.cpp" />
+    <ClCompile Include="detections\customstrings\EDGE\c_custom_edge.cpp" />
+    <ClCompile Include="detections\customstrings\BRAVE\c_custom_brave.cpp" />
+    <ClCompile Include="detections\customstrings\OPERA\c_custom_opera.cpp" />
+    <ClCompile Include="detections\customstrings\VIVALDI\c_custom_vivaldi.cpp" />
+    <ClCompile Include="detections\customstrings\FIREFOX\c_custom_firefox.cpp" />
+    <ClCompile Include="detections\usnjournal\usn_exact_match\c_usnjournal_ex.cpp" />
+    <ClCompile Include="detections\vhd_detection\c_vhd_detection.cpp" />
+    <ClCompile Include="detections\customstrings\DUSMSVC\c_custom_dusm.cpp" />
+    <ClCompile Include="detections\customstrings\CRYPTSVC\c_custom_crypt.cpp" />
+    <ClCompile Include="detections\customstrings\MSMPENG\c_custom_msmpeng.cpp" />
+    <ClCompile Include="detections\hardware\dma_checks\c_dma_checks.cpp" />
+    <ClCompile Include="detections\client_checks\registry_checks\c_registry_client.cpp" />
+    <ClCompile Include="detections\AI_detections\c_ai_detections.cpp" />
+    <ClCompile Include="detections\powershell_detections\powershell_profile_detection\c_powershell_profiles.cpp" />
+    <ClCompile Include="detections\customstrings\MPSSVC\c_mpssvc.cpp" />
+    <ClCompile Include="detections\windows_defender\c_defender_history.cpp" />
+    <ClCompile Include="detections\customstrings\APPINFO\c_custom_appinfo.cpp" />
+    <ClCompile Include="detections\customstrings\DIAGTRACK\c_custom_diagtrack.cpp" />
+    <ClCompile Include="detections\customstrings\DPS\c_custom_dps.cpp" />
+    <ClCompile Include="detections\customstrings\JAVAW\c_custom_javaw.cpp" />
+    <ClCompile Include="detections\customstrings\SCHEDULE\c_custom_schedule.cpp" />
+    <ClCompile Include="detections\customstrings\SGRM\c_custom_sgrm.cpp" />
+    <ClCompile Include="detections\customstrings\SYSMAIN\c_custom_sysmain.cpp" />
+    <ClCompile Include="detections\pe_injection_detection\c_pe_injection.cpp" />
+    <ClCompile Include="detections\pe_injection_2\c_pe_injection_2.cpp" />
+    <ClCompile Include="detections\dll_hijacking_detection\c_dllhijackcheck.cpp" />
+    <ClCompile Include="detections\client_checks\client_checks_amcache\c_amcache.cpp" />
+    <ClCompile Include="detections\hardware\hdmi_fusers\c_hdmi_fusers.cpp" />
+    <ClCompile Include="detections\deleted_exe_pf\c_exe_pf.cpp" />
+    <ClCompile Include="detections\strings\explorer_strings\c_explorer_strings.cpp" />
+    <ClCompile Include="detections\time_change_detection\c_time_change.cpp" />
+    <ClCompile Include="detections\usn_modified\c_usn_modified.cpp" />
+    <ClCompile Include="detections\strings\robloxininstance\c_rb_ininstance.cpp" />
+    <ClCompile Include="detections\usnjournal\c_usnjournal.cpp" />
+    <ClCompile Include="detections\injected_dll\c_opensavemidlmru.cpp" />
+    <ClCompile Include="detections\strings\dps_compilations\c_dps_compilations.cpp" />
+    <ClCompile Include="detections\strings\dnscache_connections\c_dnscache.cpp" />
+    <ClCompile Include="detections\customstrings\PCASVC\c_pcasvc_in_instance.cpp" />
+    <ClCompile Include="detections\customstrings\RUNTIMEBROKER\c_custom_runtimebroker.cpp" />
+    <ClCompile Include="detections\strings\lsass_connections\c_lsass_connections.cpp" />
+    <ClCompile Include="detections\pc_start_time\c_pc_start_time.cpp" />
+    <ClCompile Include="detections\install_time\c_windows_install_date.cpp" />
+    <ClCompile Include="detections\ran_with_modified_extension\c_ran_modified_extension.cpp" />
+    <ClCompile Include="detections\steam_alt_detection\c_steam_alt_detection.cpp" />
+    <ClCompile Include="detections\mc_alts_detection\c_mc_alts.cpp" />
+    <ClCompile Include="detections\bam_state_detection\c_bam_state.cpp" />
+    <ClCompile Include="detections\eventlog_cleared_detection\c_cleared_eventlog.cpp" />
+    <ClCompile Include="detections\created_disk_partition\c_created_disk_partition.cpp" />
+    <ClCompile Include="detections\deleted_disk_partition\c_deleted_disk_partition.cpp" />
+    <ClCompile Include="detections\suspended_threads\c_service_thread_checker.cpp" />
+    <ClCompile Include="detections\device_usb_removed\c_device_usb_removed.cpp" />
+    <ClCompile Include="detections\executed_files_detection\c_executed_files_detection.cpp" />
+    <ClCompile Include="detections\powershell_detections\powershell_commands_ran_detection\c_powershell_commands_ran_detection.cpp" />
+    <ClCompile Include="detections\recycle_bin_detection\c_recycle_bin_modified_detection.cpp" />
+    <ClCompile Include="detections\usn_journal_size\c_usn_journal_size_detection.cpp" />
+    <ClCompile Include="detections\game_instance_detection\c_game_instance_detection.cpp" />
+    <ClCompile Include="detections\usn_journal_modified\c_usn_journal_modified_detection.cpp" />
+    <ClCompile Include="detections\test_signing\c_test_signing.cpp" />
+    <ClCompile Include="detections\services\c_service_detection.cpp" />
+    <ClCompile Include="detections\fat32_modification2\c_fat32_modification2.cpp" />
+    <ClCompile Include="detections\fat32_modification\c_fat32_modification.cpp" />
+    <ClCompile Include="detections\detection_root.cpp" />
+    <ClCompile Include="detections\vpn\c_vpn_detection.cpp" />
+    <ClCompile Include="detections\deleted_bam_keys\rawbam\rawbam.cpp" />
+    <ClCompile Include="detections\deleted_bam_keys\livebam\livebam.cpp" />
+    <ClCompile Include="scan_api\scanapi.cpp">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles>
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="utils\thread_pool\thread_pool.cpp">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles>
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="UI\draw\draw.cpp" />
+    <ClCompile Include="main.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <ForcedIncludeFiles>pch.h</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="UI\render\render.cpp" />
+    <ClCompile Include="utils\detection\utils.cpp" />
+    <ClCompile Include="utils\protection\direct_syscall.cpp">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles>
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="utils\protection\anti_debug.cpp" />
+    <ClCompile Include="utils\protection\integrity_check.cpp" />
+    <ClCompile Include="utils\protection\process_disguise.cpp" />
+    <ClCompile Include="utils\protection\relaunch.cpp" />
+    <ClCompile Include="utils\protection\protection.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="assets\crossmark-icon.h" />
+    <ClInclude Include="assets\fonts\poppins-semibold.h" />
+    <ClInclude Include="assets\checkmark-icon.h" />
+    <ClInclude Include="detections\client_checks\sus_Ads\c_sus_ads.h" />
+    <ClInclude Include="detections\deleted_prefetch\c_deleted_prefetch.h" />
+    <ClInclude Include="detections\task_scheduler_bypass2\c_taskscheduler_bypass_2.h" />
+    <ClInclude Include="detections\wmi\c_wmi.h" />
+    <ClInclude Include="detections\nvidia_driver_patch\c_nvidia_driver_patch.h" />
+    <ClInclude Include="detections\saved_files\c_saved_files.h" />
+    <ClInclude Include="detections\letterless_volumes\c_letterless_volumes.h" />
+    <ClInclude Include="detections\file_handler_bypass\c_cpl_file.h" />
+    <ClInclude Include="detections\file_handler_bypass\c_msi_file.h" />
+    <ClInclude Include="detections\file_handler_bypass\c_reg_file.h" />
+    <ClInclude Include="detections\file_handler_bypass\c_inf_file.h" />
+    <ClInclude Include="detections\hardware\dma_pads\c_dma_pads.h" />
+    <ClInclude Include="detections\hardware\dma_protection\c_dma_protection.h" />
+    <ClInclude Include="detections\powershell_detections\powershell_whitelist.h" />
+    <ClInclude Include="detections\powershell_detections\powershell_commands_ran_3\c_powershell_commands_3.h" />
+    <ClInclude Include="detections\task_scheduler_bypass\c_tasksch_bypass.h" />
+    <ClInclude Include="detections\files_ran_as_admin\c_files_ran_as_admin.h" />
+    <ClInclude Include="detections\prefetch_injection_detection\c_prefetch_injection.h" />
+    <ClInclude Include="detections\efi_detections\c_efi_detections.h" />
+    <ClInclude Include="detections\efi_detections\c_efi_measured_boot.h" />
+    <ClInclude Include="detections\eventlog_bypass\c_eventlog_exploit.h" />
+    <ClInclude Include="detections\client_checks\yara_scanner\c_yara_scanner.h" />
+    <ClInclude Include="detections\client_checks\yara_scanner\rule_delivery.h" />
+    <ClInclude Include="detections\client_checks\yara_scanner\rule_delivery_keys.h" />
+    <ClInclude Include="utils\crypt\secure_buffer.h" />
+    <ClInclude Include="detections\client_checks\jvm_arg_scanner\c_jvm_arg_scanner.h" />
+    <ClInclude Include="detections\client_checks\java_injection\c_java_injection.h" />
+    <ClInclude Include="detections\eventlog_bypass\c_eventlog_bypass.h" />
+    <ClInclude Include="detections\prefetch_integrity\c_prefetch_integrity.h" />
+    <ClInclude Include="detections\ex_python_detection\c_ex_python.h" />
+    <ClInclude Include="detections\vbs_detection\c_vbs.h" />
+    <ClInclude Include="detections\ahk_bypass\c_ahk_bypass.h" />
+    <ClInclude Include="detections\cmd_and_bat\c_cmd_and_bat.h" />
+    <ClInclude Include="detections\asar_detection\c_asar_detection.h" />
+    <ClInclude Include="detections\crash_dump_checks\c_cdumps.h" />
+    <ClInclude Include="detections\powershell_detections\powershell_logsize\c_powershell_logsize.h" />
+    <ClInclude Include="detections\club44_bypass\c_club44.h" />
+    <ClInclude Include="detections\terminated_processes\c_terminated_processes.h" />
+    <ClInclude Include="detections\restarted_services\c_restarted_services.h" />
+    <ClInclude Include="detections\discord_accounts\c_discord_accounts.h" />
+    <ClInclude Include="detections\browser_detections\browser_cleared_history\c_cleared_history.h" />
+    <ClInclude Include="detections\cold_bypass\c_cold_bypass.h" />
+    <ClInclude Include="detections\hosts_and_prefetch\c_hosts_and_prefetch.h" />
+    <ClInclude Include="detections\executed_diffdrive\c_executed_diffdrive.h" />
+    <ClInclude Include="detections\onedrive_termination\c_onedrive_term.h" />
+    <ClInclude Include="detections\deleted_bam_keys\c_deleted_bam.h" />
+    <ClInclude Include="detections\deleted_registry_keys\c_deleted_reg_keys.h" />
+    <ClInclude Include="detections\control_flow_guard\c_cfg_check.h" />
+    <ClInclude Include="detections\system_info\c_system_info.h" />
+    <ClInclude Include="detections\r6_alts\c_r6_alts.h" />
+    <ClInclude Include="detections\epic_alts\c_epic_alts.h" />
+    <ClInclude Include="detections\customstrings\AMCACHE\c_custom_amcache.h" />
+    <ClInclude Include="detections\customstrings\SGRM\c_custom_sgrm2.h" />
+    <ClInclude Include="detections\usnjournal\junctions\c_junctions.h" />
+    <ClInclude Include="detections\cleaned_bam_and_installdate\c_bamcleaned_installdatespoofed.h" />
+    <ClInclude Include="detections\client_checks\client_checks_windb\url_checks\c_windb_urls.h" />
+    <ClInclude Include="detections\strings\winmanagement\c_winmanagement.h" />
+    <ClInclude Include="detections\customstrings\POWERSHELL\c_powershell_utils.h" />
+    <ClInclude Include="detections\customstrings\POWERSHELL\POWERSHELL_NORMAL\c_custom_powershell.h" />
+    <ClInclude Include="detections\enableprefetcher_delete\c_enableprefetcher_delete.h" />
+    <ClInclude Include="detections\usb_bypass_registry\c_usb_bypass_registry.h" />
+    <ClInclude Include="detections\usn_bypass_checks\c_usn_bypass_checks.h" />
+    <ClInclude Include="detections\fileinfosys_detection\c_prefetch_bypass.h" />
+    <ClInclude Include="detections\browser_detections\c_start_browsers.h" />
+    <ClInclude Include="detections\anydesk_files\c_anydesk_files.h" />
+    <ClInclude Include="detections\browser_detections\browser_download_history\c_browser_downloads.h" />
+    <ClInclude Include="detections\browser_detections\browser_search_history\c_browserhistory.h" />
+    <ClInclude Include="detections\customstrings\EVENTLOG\c_custom_evt.h" />
+    <ClInclude Include="detections\customstrings\FIVEM\c_custom_fivem.h" />
+    <ClInclude Include="detections\customstrings\SIHOST\c_custom_si.h" />
+    <ClInclude Include="detections\customstrings\TASKHOSTW\c_custom_task.h" />
+    <ClInclude Include="detections\hardware\hdmi_fusers\c_ddc_support.h" />
+    <ClInclude Include="detections\powershell_detections\powershell_commands_ran_2\c_commands_ran_2.h" />
+    <ClInclude Include="detections\lua_script_detection\c_lua_script_detection.h" />
+    <ClInclude Include="detections\customstrings\LOGITECH\c_custom_logitech.h" />
+    <ClInclude Include="detections\customstrings\DISCORD\c_custom_discord.h" />
+    <ClInclude Include="detections\customstrings\CHROME\c_custom_chrome.h" />
+    <ClInclude Include="detections\customstrings\EDGE\c_custom_edge.h" />
+    <ClInclude Include="detections\customstrings\BRAVE\c_custom_brave.h" />
+    <ClInclude Include="detections\customstrings\OPERA\c_custom_opera.h" />
+    <ClInclude Include="detections\customstrings\VIVALDI\c_custom_vivaldi.h" />
+    <ClInclude Include="detections\customstrings\FIREFOX\c_custom_firefox.h" />
+    <ClInclude Include="detections\usnjournal\usn_exact_match\c_usnjournal_ex.h" />
+    <ClInclude Include="detections\vhd_detection\c_vhd_detection.h" />
+    <ClInclude Include="detections\customstrings\DUSMSVC\c_custom_dusm.h" />
+    <ClInclude Include="detections\customstrings\CRYPTSVC\c_custom_crypt.h" />
+    <ClInclude Include="detections\customstrings\MSMPENG\c_custom_msmpeng.h" />
+    <ClInclude Include="detections\hardware\dma_checks\c_dma_checks.h" />
+    <ClInclude Include="detections\client_checks\registry_checks\c_registry_client.h" />
+    <ClInclude Include="detections\AI_detections\c_ai_detections.h" />
+    <ClInclude Include="detections\prefetch_parser\prefetch_parser.h" />
+    <ClInclude Include="detections\powershell_detections\powershell_profile_detection\c_powershell_profiles.h" />
+    <ClInclude Include="detections\customstrings\MPSSVC\c_mpssvc.h" />
+    <ClInclude Include="detections\windows_defender\c_defender_history.h" />
+    <ClInclude Include="detections\customstrings\APPINFO\c_custom_appinfo.h" />
+    <ClInclude Include="detections\customstrings\DIAGTRACK\c_custom_diagtrack.h" />
+    <ClInclude Include="detections\customstrings\DPS\c_custom_dps.h" />
+    <ClInclude Include="detections\customstrings\JAVAW\c_custom_javaw.h" />
+    <ClInclude Include="detections\customstrings\SCHEDULE\c_custom_schedule.h" />
+    <ClInclude Include="detections\customstrings\SGRM\c_custom_sgrm.h" />
+    <ClInclude Include="detections\customstrings\SYSMAIN\c_custom_sysmain.h" />
+    <ClInclude Include="detections\pe_injection_detection\c_pe_injection.h" />
+    <ClInclude Include="detections\pe_injection_2\c_pe_injection_2.h" />
+    <ClInclude Include="detections\dll_hijacking_detection\c_dllhijackcheck.h" />
+    <ClInclude Include="detections\client_checks\client_checks_amcache\c_amcache.h" />
+    <ClInclude Include="detections\client_checks\client_checks_amcache\c_amcache_filters.h" />
+    <ClInclude Include="detections\hardware\hdmi_fusers\c_hdmi_fusers.h" />
+    <ClInclude Include="detections\deleted_exe_pf\c_exe_pf.h" />
+    <ClInclude Include="detections\strings\explorer_strings\c_explorer_strings.h" />
+    <ClInclude Include="detections\time_change_detection\c_time_change.h" />
+    <ClInclude Include="detections\usn_modified\c_usn_modified.h" />
+    <ClInclude Include="detections\strings\robloxininstance\c_rb_ininstance.h" />
+    <ClInclude Include="detections\usnjournal\c_usnjournal.h" />
+    <ClInclude Include="detections\injected_dll\c_opensavemidlmru.h" />
+    <ClInclude Include="detections\strings\dps_compilations\c_dps_compilations.h" />
+    <ClInclude Include="detections\strings\dnscache_connections\c_dnscache.h" />
+    <ClInclude Include="detections\customstrings\PCASVC\c_pcasvc_in_instance.h" />
+    <ClInclude Include="detections\customstrings\RUNTIMEBROKER\c_custom_runtimebroker.h" />
+    <ClInclude Include="detections\strings\lsass_connections\c_lsass_connections.h" />
+    <ClInclude Include="detections\pc_start_time\c_pc_start_time.h" />
+    <ClInclude Include="detections\install_time\c_windows_install_date.h" />
+    <ClInclude Include="detections\ran_with_modified_extension\c_ran_modified_extension.h" />
+    <ClInclude Include="detections\steam_alt_detection\c_steam_alt_detection.h" />
+    <ClInclude Include="detections\mc_alts_detection\c_mc_alts.h" />
+    <ClInclude Include="detections\bam_state_detection\c_bam_state.h" />
+    <ClInclude Include="detections\eventlog_cleared_detection\c_cleared_eventlog.h" />
+    <ClInclude Include="detections\created_disk_partition\c_created_disk_partition.h" />
+    <ClInclude Include="detections\deleted_disk_partition\c_deleted_disk_partition.h" />
+    <ClInclude Include="detections\suspended_threads\c_service_thread_checker.h" />
+    <ClInclude Include="detections\device_usb_removed\c_device_usb_removed.h" />
+    <ClInclude Include="detections\executed_files_detection\c_executed_files_detection.h" />
+    <ClInclude Include="detections\powershell_detections\powershell_commands_ran_detection\c_powershell_commands_ran_detection.h" />
+    <ClInclude Include="detections\recycle_bin_detection\c_recycle_bin_modified_detection.h" />
+    <ClInclude Include="detections\usn_journal_size\c_usn_journal_size_detection.h" />
+    <ClInclude Include="detections\game_instance_detection\c_game_instance_detection.h" />
+    <ClInclude Include="detections\usn_journal_modified\c_usn_journal_modified_detection.h" />
+    <ClInclude Include="detections\test_signing\c_test_signing.h" />
+    <ClInclude Include="detections\services\c_service_detection.h" />
+    <ClInclude Include="detections\fat32_modification2\c_fat32_modification2.h" />
+    <ClInclude Include="detections\fat32_modification\c_fat32_modification.h" />
+    <ClInclude Include="detections\detection_root.h" />
+    <ClInclude Include="detections\vpn\c_vpn_detection.h" />
+    <ClInclude Include="detections\deleted_bam_keys\rawbam\rawbam.h" />
+    <ClInclude Include="detections\deleted_bam_keys\livebam\livebam.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="scan_api\scanapi.hpp" />
+    <ClInclude Include="utils\crypt\skCrypt.h" />
+    <ClInclude Include="utils\crypt\xorstr.h" />
+    <ClInclude Include="utils\detection\terms_popup.h" />
+    <ClInclude Include="utils\thread_pool\thread_pool.h" />
+    <ClInclude Include="utils\detection\utils.h" />
+    <ClInclude Include="utils\imgui\imspinner.h" />
+    <ClInclude Include="utils\logger\logger.h" />
+    <ClInclude Include="utils\protection\protection.h" />
+    <ClInclude Include="utils\protection\direct_syscall.h" />
+    <ClInclude Include="utils\protection\anti_debug.h" />
+    <ClInclude Include="utils\protection\integrity_check.h" />
+    <ClInclude Include="utils\protection\process_disguise.h" />
+    <ClInclude Include="utils\protection\relaunch.h" />
+    <ClInclude Include="UI\draw\draw.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="UI\render\render.h" />
+    <ClInclude Include="vars.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="detect.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\ext\logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="ImGui\imgui.vcxproj">
+      <Project>{7f8e1a02-3d5c-4b6a-9f8e-1a023d5c4b6a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="detections\browser_detections\sqlite\sqlite.vcxproj">
+      <Project>{4f6b7c9d-8e0f-5a3b-9c2d-6e7f8a9b0c1d}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <ForcedIncludeFiles>pch.h</ForcedIncludeFiles>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

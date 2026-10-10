@@ -1,0 +1,64 @@
+name: build
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      game:
+        description: "Game variant to build"
+        default: "minecraft"
+        required: false
+        type: choice
+        options:
+          - minecraft
+          - siege
+          - gmod
+          - fivem
+          - freefire
+          - roblox
+          - fortnite
+          - cod
+          - rust
+          - dayz
+          - cs
+      mode:
+        description: "Build mode"
+        default: "release"
+        required: false
+        type: choice
+        options:
+          - release
+          - debug
+
+env:
+  GAME: ${{ github.event.inputs.game || 'minecraft' }}
+  MODE: ${{ github.event.inputs.mode || 'release' }}
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup xmake
+        uses: xmake-io/github-action-setup-xmake@v1
+        with:
+          xmake-version: latest
+
+      - name: Setup MSVC (x64)
+        uses: ilammy/msvc-dev-cmd@v1
+        with:
+          arch: x64
+
+      - name: Build detect (${{ env.GAME }}, ${{ env.MODE }})
+        shell: powershell
+        run: .\build.ps1 -Game $env:GAME -Mode $env:MODE
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: detect-${{ env.GAME }}-${{ env.MODE }}
+          path: build/detect/
+          if-no-files-found: error

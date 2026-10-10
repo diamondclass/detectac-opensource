@@ -1,0 +1,53 @@
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+
+# Executables
+*.exe
+*.out
+*.app
+
+# detect logs
+*.detect
+*.user
+
+# directiories idk
+intermediates/
+Release/
+Debug/
+Detect FiveM/
+Detect Minecraft/
+.vs/
+.idea/
+
+*.pdb
+
+# xmake / build outputs (all regenerated locally, never committed)
+build/
+build-*/
+dist/
+.xmake/
+compile_commands.json
