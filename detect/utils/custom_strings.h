@@ -3,6 +3,7 @@
 
 #include <curl/curl.h>
 #include "../detections/client_checks/yara_scanner/rule_delivery_keys.h"
+#include "cache/rule_cache.h"
 #include <array>
 #include <cstdint>
 #include <iostream>
@@ -48,7 +49,17 @@ inline std::string fetch_json(const std::string& url) {
     CURLcode res = curl_easy_perform(curl);
 
     curl_easy_cleanup(curl);
-    if (res != CURLE_OK) return "";
+    if (res != CURLE_OK || response_data.empty()) {
+        // Offline: reuse the last good ruleset fetched while online.
+        std::string cached;
+        if (rule_cache::load(rule_cache::strings_name().c_str(), cached) && !cached.empty() &&
+            (cached[0] == '{' || cached[0] == '['))
+            return cached;
+        return "";
+    }
+    // Online: refresh the cache (only for plausible JSON payloads).
+    if (response_data[0] == '{' || response_data[0] == '[')
+        rule_cache::save(rule_cache::strings_name().c_str(), response_data);
     return response_data;
 }
 

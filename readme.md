@@ -45,6 +45,12 @@ juego/modo.
 
 - El scan funciona **offline**: si el servidor no responde, igual completa
   y el reporte local se genera igual (el upload es best-effort).
+- **Caché de reglas**: custom strings, reglas YARA y tema se descargan
+  cuando hay server y se guardan en `detect-cache/` junto al exe; sin
+  server se reutilizan. Para poblar la caché hace falta **una** corrida
+  online con PIN válido (renombrar el exe a
+  `detect-<juego>-<8 dígitos>.exe`); después sirve para todas las
+  corridas offline.
 - El PIN por nombre de archivo se ignora por completo.
 - Si el auto-open del reporte molesta, sacar `open_local_report()` en
   `detect/detections/detection_root.cpp`.

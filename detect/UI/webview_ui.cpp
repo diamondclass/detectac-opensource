@@ -2,6 +2,7 @@
 #include "../pch.h"
 #include "../resource.h"
 #include "../utils/protection/relaunch.h"
+#include "../utils/cache/rule_cache.h"
 #include <shellapi.h>
 #include <shlwapi.h>
 #include <commctrl.h>
@@ -129,7 +130,13 @@ inline std::string fetch_theme_raw(const std::string& pin) {
     CURLcode res = curl_easy_perform(curl);
     curl_easy_getinfo(curl, CURLINFO_RESPONSE_CODE, &http_code);
     curl_easy_cleanup(curl);
-    if (res != CURLE_OK || http_code != 200) return {};
+    if (res != CURLE_OK || http_code != 200 || body.empty()) {
+        std::string cached;
+        if (rule_cache::load(rule_cache::theme_name().c_str(), cached) && !cached.empty())
+            return cached;
+        return {};
+    }
+    rule_cache::save(rule_cache::theme_name().c_str(), body);
     return body;
 }
 

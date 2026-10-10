@@ -1,7 +1,11 @@
 #include "c_yara_scanner.h"
 #include "rule_delivery.h"
+#include "rule_delivery_keys.h"
 #include "yara_compile_util.h"
 #include "../../../utils/sig_cache.h"
+#include "../../../utils/cache/rule_cache.h"
+#include "rule_version_store.hpp"
+#include <cstring>
 
 std::atomic<uint64_t>                 YaraScanner::s_filesScanned{ 0 };
 std::atomic<uint64_t>                 YaraScanner::s_filesSkipped{ 0 };
@@ -993,6 +997,47 @@ ScanResult YaraScanner::yara_Scanner()
             return {};
 
         RuleDelivery::FetchResult delivery = RuleDelivery::FetchRules(detect.pin);
+
+        if (delivery.ok && delivery.rulesLength > 0) {
+            // Online: refresh the offline cache (4-byte BE version + rules).
+            try {
+                std::string blob;
+                blob.resize(4 + delivery.rulesLength);
+                blob[0] = static_cast<char>((delivery.rulesetVersion >> 24) & 0xFF);
+                blob[1] = static_cast<char>((delivery.rulesetVersion >> 16) & 0xFF);
+                blob[2] = static_cast<char>((delivery.rulesetVersion >> 8) & 0xFF);
+                blob[3] = static_cast<char>(delivery.rulesetVersion & 0xFF);
+                std::memcpy(&blob[4], delivery.plaintext.data(), delivery.rulesLength);
+                rule_cache::save(rule_cache::yara_name().c_str(), blob);
+            } catch (...) {}
+        } else {
+            // Offline: reuse the last good ruleset fetched while online,
+            // honouring the persisted anti-rollback floor.
+            try {
+                std::string blob;
+                if (rule_cache::load(rule_cache::yara_name().c_str(), blob) && blob.size() > 4) {
+                    const uint32_t ver =
+                        (static_cast<uint32_t>(static_cast<unsigned char>(blob[0])) << 24) |
+                        (static_cast<uint32_t>(static_cast<unsigned char>(blob[1])) << 16) |
+                        (static_cast<uint32_t>(static_cast<unsigned char>(blob[2])) << 8) |
+                        static_cast<uint32_t>(static_cast<unsigned char>(blob[3]));
+                    const uint32_t floor = rule_version_store::load_min_version();
+                    if (ver >= RuleDelivery::MIN_RULESET_VERSION && (floor == 0 || ver >= floor)) {
+                        if (ver > floor) rule_version_store::persist_min_version(ver);
+                        delivery.plaintext.wipe();
+                        if (delivery.plaintext.allocate(blob.size() - 4 + 1)) {
+                            std::memcpy(delivery.plaintext.data(), blob.data() + 4, blob.size() - 4);
+                            delivery.plaintext.data()[blob.size() - 4] = 0;
+                            delivery.plaintext.shrink_to(blob.size() - 4 + 1);
+                            delivery.rulesLength = blob.size() - 4;
+                            delivery.rulesetVersion = ver;
+                            delivery.ok = true;
+                            delivery.error = RuleDelivery::FetchError::None;
+                        }
+                    }
+                }
+            } catch (...) {}
+        }
 
         if (!delivery.ok || delivery.rulesLength == 0)
         {
