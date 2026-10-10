@@ -23,6 +23,8 @@ lista completa de entries al final.
 3. Al terminar se guarda `detect-report-<juego>-<fecha-hora>.html` junto al
    exe y se abre automáticamente en el navegador.
 
+![reporte](https://i.imgur.com/2oHSdkU.png)
+
 ## Build
 
 Requisitos: [xmake](https://xmake.io) + Visual Studio Build Tools (MSVC).
