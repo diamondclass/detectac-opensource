@@ -331,6 +331,18 @@ public:
         return out;
     }
 
+    static std::string report_category(const std::string& msg) {
+        std::string cat = msg;
+        size_t colon = cat.find(':');
+        if (colon != std::string::npos && colon > 0 && colon <= 64)
+            cat = cat.substr(0, colon);
+        else if (cat.size() > 64)
+            cat = cat.substr(0, 64);
+        while (!cat.empty() && (cat.back() == ' ' || cat.back() == '.')) cat.pop_back();
+        if (cat.empty()) cat = "(no message)";
+        return cat;
+    }
+
     std::string save_local_html_report()
     {
         struct report_row { std::string ts, type, msg, sha1; };
@@ -411,34 +423,129 @@ public:
         std::string path = dir + "\\detect-report-" + game_name + "-" + stamp + ".html";
 
         std::ostringstream html;
-        html << "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n";
-        html << "<title>detect " << game_name << " scan report</title>\n";
-        html << "<style>body{font-family:Consolas,monospace;background:#111;color:#ddd;margin:24px;}"
-                "h1{font-size:20px}table{border-collapse:collapse;width:100%;font-size:12px}"
-                "th,td{border:1px solid #444;padding:4px 8px;text-align:left;vertical-align:top}"
-                "th{background:#222}.det{background:#3a0d0d}.crit{background:#3a240d}"
-                ".warn{background:#33330d}.summary{margin:12px 0}</style>\n";
-        html << "</head>\n<body>\n";
-        html << "<h1>detect " << game_name << " scan report</h1>\n";
-        html << "<div class=\"summary\">Finished: " << pretty
-             << " | entries: " << rows.size()
-             << " | DETECTION: " << n_det
-             << " | CRITICAL: " << n_crit
-             << " | WARNING: " << n_warn
-             << " | INFO: " << n_info << "</div>\n";
-        html << "<table>\n<tr><th>#</th><th>timestamp</th><th>level</th><th>message</th><th>sha1</th></tr>\n";
-        for (size_t i = 0; i < rows.size(); ++i) {
+        html << "<!DOCTYPE html>\n<html lang='en'>\n<head>\n<meta charset='utf-8'>\n";
+        html << "<title>DetectAC " << game_name << " scan report</title>\n";
+        html << "<style>\n"
+                "*{box-sizing:border-box}body{margin:0;background:#0a0c0e;color:#d7dee5;font-family:'Segoe UI',Arial,sans-serif}\n"
+                ".side{position:fixed;left:0;top:0;bottom:0;width:224px;background:#0d1114;border-right:1px solid #1f282f;padding:18px 12px;overflow-y:auto}\n"
+                ".logo{color:#3ddc84;font-weight:800;font-size:21px;margin:0 0 4px 6px}\n"
+                ".logosub{color:#8b98a5;font-size:12px;margin:0 0 18px 6px}\n"
+                ".navbtn{display:flex;justify-content:space-between;align-items:center;width:100%;background:none;border:0;color:#c7d1d9;padding:10px 12px;border-radius:8px;cursor:pointer;font-size:14px;margin-bottom:2px}\n"
+                ".navbtn:hover{background:#161c22}.navbtn.active{background:#123324;color:#3ddc84}\n"
+                ".pill{background:#1f282f;border-radius:10px;padding:1px 9px;font-size:12px;color:#9fb0bd;white-space:nowrap}\n"
+                ".main{margin-left:224px;padding:26px 30px;max-width:1180px}\n"
+                ".tab{display:none}.tab.active{display:block}\n"
+                "h1{font-size:24px;margin:0 0 4px}h1 span{color:#3ddc84}h2{font-size:18px;margin:26px 0 12px;color:#fff}\n"
+                ".sub{color:#8b98a5;font-size:13px;margin-bottom:6px}\n"
+                ".badges{display:flex;gap:10px;margin:14px 0 6px;flex-wrap:wrap}\n"
+                ".badge{border-radius:12px;padding:4px 14px;font-size:13px;font-weight:700;border:1px solid;white-space:nowrap}\n"
+                ".sm{font-size:11px;padding:2px 10px}\n"
+                ".b-det{color:#ff6b69;border-color:#5a2326;background:rgba(240,82,79,.12)}\n"
+                ".b-crit{color:#ffa94d;border-color:#5a3a1e;background:rgba(255,140,66,.12)}\n"
+                ".b-warn{color:#ffd43b;border-color:#5a4d1e;background:rgba(251,191,36,.12)}\n"
+                ".b-info{color:#7cc4ff;border-color:#23465a;background:rgba(124,196,255,.10)}\n"
+                ".cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:16px}\n"
+                ".card{background:#12161a;border:1px solid #232b33;border-radius:12px;padding:16px;cursor:pointer}\n"
+                ".card:hover{border-color:#3ddc84}.card .n{font-size:28px;font-weight:800}.card .l{color:#8b98a5;font-size:13px}\n"
+                ".filter{width:100%;background:#12161a;border:1px solid #232b33;color:#d7dee5;border-radius:10px;padding:10px 14px;margin:4px 0 14px;font-size:14px}\n"
+                ".group{background:#12161a;border:1px solid #232b33;border-radius:12px;margin-bottom:10px;overflow:hidden}\n"
+                ".group summary{cursor:pointer;padding:13px 16px;display:flex;gap:12px;align-items:center;list-style:none}\n"
+                ".group summary::-webkit-details-marker{display:none}\n"
+                ".group summary:hover{background:#161c22}\n"
+                ".gname{font-weight:700;flex:1}\n"
+                ".entries{border-top:1px solid #232b33}\n"
+                ".entry{padding:10px 16px;border-bottom:1px solid #1b2229}\n"
+                ".entry:last-child{border-bottom:0}\n"
+                ".emsg{font-size:13.5px}\n"
+                ".emeta{color:#8b98a5;font-size:12px;margin-top:3px;font-family:Consolas,monospace;word-break:break-all}\n"
+                ".ets{margin-right:12px}\n"
+                ".foot{margin:34px 0 10px;color:#3ddc84;font-size:13px;text-align:center}\n"
+                "</style>\n</head>\n<body>\n";
+
+        auto emit_entry = [&](size_t i) {
             const auto& r = rows[i];
-            const char* cls = (r.type == "DETECTION") ? " class=\"det\""
-                : (r.type == "CRITICAL") ? " class=\"crit\""
-                : (r.type == "WARNING") ? " class=\"warn\"" : "";
-            html << "<tr" << cls << "><td>" << i
-                 << "</td><td>" << html_escape(r.ts)
-                 << "</td><td>" << html_escape(r.type)
-                 << "</td><td>" << html_escape(r.msg)
-                 << "</td><td>" << html_escape(r.sha1) << "</td></tr>\n";
+            html << "<div class='entry'><div class='emsg'>" << html_escape(r.msg) << "</div>\n<div class='emeta'>";
+            if (!r.ts.empty()) html << "<span class='ets'>" << html_escape(r.ts) << "</span>";
+            if (!r.sha1.empty()) html << "<span class='esha'>SHA1 " << html_escape(r.sha1) << "</span>";
+            html << "</div></div>\n";
+        };
+
+        auto emit_level_tab = [&](const char* tab_id, const char* title, const char* badge_cls,
+                                  const char* badge_txt, const std::vector<size_t>& idx) {
+            html << "<section class='tab' id='" << tab_id << "'>\n<h2>" << title
+                 << " <span class='pill'>" << idx.size() << "</span></h2>\n";
+            html << "<input class='filter' data-target='" << tab_id << "' placeholder='Filter...'>\n";
+            std::vector<std::string> order;
+            std::unordered_map<std::string, std::vector<size_t>> groups;
+            for (size_t i : idx) {
+                std::string c = report_category(rows[i].msg);
+                auto it = groups.find(c);
+                if (it == groups.end()) { order.push_back(c); groups[c] = { i }; }
+                else it->second.push_back(i);
+            }
+            size_t g = 0;
+            for (const auto& c : order) {
+                const auto& members = groups[c];
+                html << "<details class='group'" << ((g < 3) ? " open" : "") << ">\n<summary><span class='gname'>"
+                     << html_escape(c) << "</span><span class='pill'>" << members.size() << " items</span>"
+                     << "<span class='badge " << badge_cls << " sm'>" << badge_txt << "</span></summary>\n<div class='entries'>\n";
+                for (size_t i : members) emit_entry(i);
+                html << "</div>\n</details>\n";
+                ++g;
+            }
+            html << "</section>\n";
+        };
+
+        html << "<div class='side'>\n<div class='logo'>detect.ac</div>\n<div class='logosub'>"
+             << game_name << " scan report</div>\n";
+        html << "<button class='navbtn active' data-tab='tab-overview'>Overview</button>\n";
+        html << "<button class='navbtn' data-tab='tab-critical'>Critical <span class='pill'>" << n_crit << "</span></button>\n";
+        html << "<button class='navbtn' data-tab='tab-warning'>Warning <span class='pill'>" << n_warn << "</span></button>\n";
+        html << "<button class='navbtn' data-tab='tab-detection'>Detection <span class='pill'>" << n_det << "</span></button>\n";
+        html << "<button class='navbtn' data-tab='tab-info'>Info <span class='pill'>" << n_info << "</span></button>\n";
+        html << "<button class='navbtn' data-tab='tab-entries'>All Entries <span class='pill'>" << rows.size() << "</span></button>\n";
+        html << "</div>\n<div class='main'>\n";
+        html << "<h1>Scan report <span>" << game_name << "</span></h1>\n";
+        html << "<div class='sub'>Finished " << pretty << " &middot; " << rows.size() << " entries</div>\n";
+        html << "<div class='badges'><span class='badge b-det'>Detections: " << n_det
+             << "</span><span class='badge b-crit'>Critical: " << n_crit
+             << "</span><span class='badge b-warn'>Warnings: " << n_warn
+             << "</span><span class='badge b-info'>Info: " << n_info << "</span></div>\n";
+
+        html << "<section class='tab active' id='tab-overview'>\n<h2>Overview</h2>\n<div class='cards'>\n";
+        html << "<div class='card' onclick=\"showTab('tab-critical')\"><div class='n'>" << n_crit << "</div><div class='l'>Critical</div></div>\n";
+        html << "<div class='card' onclick=\"showTab('tab-warning')\"><div class='n'>" << n_warn << "</div><div class='l'>Warning</div></div>\n";
+        html << "<div class='card' onclick=\"showTab('tab-detection')\"><div class='n'>" << n_det << "</div><div class='l'>Detection</div></div>\n";
+        html << "<div class='card' onclick=\"showTab('tab-info')\"><div class='n'>" << n_info << "</div><div class='l'>Info</div></div>\n";
+        html << "</div>\n</section>\n";
+
+        {
+            std::vector<size_t> idx_det, idx_crit, idx_warn, idx_info;
+            for (size_t i = 0; i < rows.size(); ++i) {
+                const std::string& t = rows[i].type;
+                if (t == "DETECTION") idx_det.push_back(i);
+                else if (t == "CRITICAL") idx_crit.push_back(i);
+                else if (t == "WARNING") idx_warn.push_back(i);
+                else idx_info.push_back(i);
+            }
+            emit_level_tab("tab-critical", "Critical", "b-crit", "CRITICAL", idx_crit);
+            emit_level_tab("tab-warning", "Warning", "b-warn", "WARNING", idx_warn);
+            emit_level_tab("tab-detection", "Detection", "b-det", "DETECTION", idx_det);
+            emit_level_tab("tab-info", "Info", "b-info", "INFO", idx_info);
         }
-        html << "</table>\n</body>\n</html>\n";
+
+        html << "<section class='tab' id='tab-entries'>\n<h2>All Entries <span class='pill'>" << rows.size() << "</span></h2>\n";
+        html << "<input class='filter' data-target='tab-entries' placeholder='Filter entries...'>\n<div class='entries' style='border:1px solid #232b33;border-radius:12px;overflow:hidden'>\n";
+        for (size_t i = 0; i < rows.size(); ++i) emit_entry(i);
+        html << "</div>\n</section>\n";
+
+        html << "<div class='foot'>DetectAC vibecoded asf ss tool</div>\n";
+        html << "</div>\n<script>\n"
+                "function showTab(id){var s=document.querySelectorAll('.tab');for(var i=0;i<s.length;i++){s[i].classList.toggle('active',s[i].id===id);}var b=document.querySelectorAll('.navbtn');for(var j=0;j<b.length;j++){b[j].classList.toggle('active',b[j].getAttribute('data-tab')===id);}window.scrollTo(0,0);}\n"
+                "var btns=document.querySelectorAll('.navbtn');for(var k=0;k<btns.length;k++){btns[k].addEventListener('click',function(){showTab(this.getAttribute('data-tab'));});}\n"
+                "var fils=document.querySelectorAll('.filter');for(var f=0;f<fils.length;f++){fils[f].addEventListener('input',function(){var t=document.getElementById(this.getAttribute('data-target'));if(!t)return;var q=this.value.toLowerCase();var items=t.querySelectorAll('.group,.entry');for(var m=0;m<items.length;m++){var el=items[m];var txt=el.textContent.toLowerCase();el.style.display=(!q||txt.indexOf(q)!==-1)?'':'none';}});}\n"
+                "showTab('tab-overview');\n"
+                "</script>\n</body>\n</html>\n";
 
         std::ofstream ofs(path, std::ios::out | std::ios::trunc);
         if (!ofs) return {};
