@@ -5,6 +5,10 @@ no es mia jajsalu2
 
 --------------------
 
+NO INCLUYE VALORES SERVERSIDE (aún jeje)
+
+--------------------
+
 # DetectAC (open-source rebuild)
 
 Scanner de cheat-traces para Windows. Un binario por juego (11 variantes).
